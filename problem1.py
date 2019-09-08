@@ -1,10 +1,17 @@
 def oddNumbers(s):
-    choices = list(range(0, 10))
-    possible = 0
+    choices = 1
+    possible = 9
     used = []
-    print(choices)
-    for i in choices:
-        def sum = 0
-        for j in s:
+    for i in range(len(s)):
+        if i == 0:
+            choices *= 5
+        elif s[-i -1] in used:
+            choices *= 1
+        else:
+            choices *= possible
+            possible -= 1
+        used.append(s[-i -1])
+    return choices
 
-oddNumbers("ab")
+
+print(oddNumbers("bbbbbbbbbbbbbbbccccccbbbbbbeeezzzxxx"))
