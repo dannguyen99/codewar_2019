@@ -17,9 +17,7 @@ def attackList(accessList, m, n):
         # print(accesses)
         for i in accesses:
             access = 1
-            print([element for element in accesses if element is not i])
-            for k in [element for element in accesses if element is not i]:
-                # print(abs((accesses[i] - accesses[k]).total_seconds()/60) == m)
+            for k in accesses[accesses.index(i)+1:]:
                 if abs((i - k).total_seconds()/60) <= m:
                     access += 1
             if access >= n:
